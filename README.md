@@ -1,63 +1,45 @@
 # Node.js Backend Learning Repository
 
-A comprehensive learning repository for mastering Node.js and Express.js backend development fundamentals through hands-on practice.
+Practical repository for learning Node.js and Express.js backend concepts. Contents are updated frequently with small, focused examples.
 
-## 📚 Topics Covered
+## What's included (high level)
+- Node.js core examples (modules, HTTP, FS, streams, events)
+- Express basics (server, routing, HTTP methods)
+- Modular routing and controllers
+- Middleware examples (logging, custom middleware)
+- Query string handling
+- Static file serving
+- Mongoose / MongoDB examples (models and basic CRUD)
 
-- **Node.js Core**: Module systems, HTTP protocol, File System operations, Streams, Event-driven architecture, Basic routing
-- **Express.js Framework**: Server initialization, HTTP methods (GET, POST, PUT, DELETE), Route management, Controller pattern, Query parameters, Middleware pipeline, Modular routing architecture
+## New: Mongoose
+- Folder: Mongoose
+- Entry: Mongoose/index.js — connects to MongoDB using dotenv and runs sample model operations.
+- Model: Mongoose/models/Movies.js — schema and example CRUD helpers (createDoc, getDoc, updateDoc, updateMany, del)
+- Required: provide a .env file with DATABASE_URL for the MongoDB connection string.
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v14+)
-- npm
-
-### Installation & Execution
+## Quick start
+Prerequisites: Node.js (v14+) and npm
 
 ```bash
-# Install dependencies
+# Install dependencies (root or per-folder if needed)
 npm install
 
-# Run Node.js core examples
-node Node/<module>/index.js
+# Run main Express app
+node Express/index.js
 
-# Run Express.js examples
-node Express/<folder>/index.js
-```
-
-## 📁 Project Architecture
-
-**Convention**: Each directory contains `index.js` as the primary entry point with supporting modules handling specific functionality.
-
-### Example Commands
-
-```bash
-# Node.js Core Modules
-node Node/commonModule/index.js
-node Node/ES6Module/index.js
-node Node/HttpModule/index.js
-
-# Express.js Applications
-node Express/routes/index.js
+# Run a specific example (each folder's index.js is the entry point)
 node Express/QueryString/index.js
-node Express/controllers/index.js
 node Express/middlewares/index.js
-node Express/servefiles/index.js
+node Express/routes/app.js
+
+# Run Mongoose examples (ensure .env contains DATABASE_URL)
+node Mongoose/index.js
 ```
 
-## 🛠 Technology Stack
+## Conventions
+- Each topic folder exposes index.js as the primary entry point; other files are supportive modules.
+- Default example server port: 8000.
 
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Language**: ES6+
-
-## 📝 Notes
-
-- This repository is actively maintained and updated with new concepts
-- Each module includes practical examples with clear implementations
-- Default server port: 8000
-
----
-
-**Continuously evolving as learning progresses.** 🚀
+## Notes
+- This repository is a living learning resource and will be updated as new topics are explored.
+- For Mongoose examples, create a .env at the repository root with DATABASE_URL set to your MongoDB URI.
